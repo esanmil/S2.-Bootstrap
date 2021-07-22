@@ -62,39 +62,38 @@ body {
         top:30%;
         left:10%;
         list-style: none;
-        width: 20px;
-	    height: 20px;
+        width: 500px;
+	    height: 500px;
         left: 25%;
-        
-        
         /*transform: rotate(374deg) scale(0.8, 0.8);*/
-       
-        animation:spin 10s linear, bigger 10s linear;
+        animation:spin 10s linear forwards, bigger2 10s linear forwards;
+        img{
+            width: 100%;
+        }
         
     }
-
-    
-    @keyframes spin { 100% { transform:rotate(360deg); } }
-    @keyframes bigger { 100% { transform:scale(0.8); } }
 
     .circle li.pink{
         position: absolute;
         top:5%;
         left:30%x;
         list-style:none;
+        width: 500px;
+	    height: 500px;
         display: block;
-        list-style: none;
        /*transform: rotate(355deg) scale(0.4, 0.4);*/
-     
         animation:spin 10s linear, bigger 10s forwards;
+        img{
+            width: 100%;
+        }
        
     }
 
     
 
     .scrolldown{
-        position: relative;
-        bottom: -300px;
+        position: absolute;
+        bottom: 0;
         left: 50%;
         width: 40px;
         height: 40px;
@@ -130,6 +129,11 @@ body {
 
             }
     }
+
+      
+    @keyframes spin { 100% { transform:rotate(360deg); } }
+    @keyframes bigger { 100% { transform:scale(0.8); } }
+    @keyframes bigger2 { 100% { transform:scale(0.6); } }
     
     @keyframes animate 
     {
@@ -156,7 +160,7 @@ body {
 
     .content-center{
         
-        margin-top: 350px;
+        
         text-align: center;
         padding: 50px 0 0 0;
         
@@ -215,6 +219,8 @@ body {
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
     
-
+html{
+    scroll-behavior: smooth;
+}
 
         

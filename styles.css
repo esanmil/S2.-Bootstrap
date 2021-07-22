@@ -49,40 +49,16 @@ body {
   top: 30%;
   left: 10%;
   list-style: none;
-  width: 20px;
-  height: 20px;
+  width: 500px;
+  height: 500px;
   left: 25%;
   /*transform: rotate(374deg) scale(0.8, 0.8);*/
-  -webkit-animation: spin 10s linear, bigger 10s linear;
-          animation: spin 10s linear, bigger 10s linear;
+  -webkit-animation: spin 10s linear forwards, bigger2 10s linear forwards;
+          animation: spin 10s linear forwards, bigger2 10s linear forwards;
 }
 
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes bigger {
-  100% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
-}
-
-@keyframes bigger {
-  100% {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
+.circle li.blue img {
+  width: 100%;
 }
 
 .circle li.pink {
@@ -90,16 +66,21 @@ body {
   top: 5%;
   left: 30%x;
   list-style: none;
+  width: 500px;
+  height: 500px;
   display: block;
-  list-style: none;
   /*transform: rotate(355deg) scale(0.4, 0.4);*/
   -webkit-animation: spin 10s linear, bigger 10s forwards;
           animation: spin 10s linear, bigger 10s forwards;
 }
 
+.circle li.pink img {
+  width: 100%;
+}
+
 .scrolldown {
-  position: relative;
-  bottom: -300px;
+  position: absolute;
+  bottom: 0;
   left: 50%;
   width: 40px;
   height: 40px;
@@ -142,6 +123,48 @@ body {
           animation-delay: 0;
 }
 
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bigger {
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes bigger {
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes bigger2 {
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes bigger2 {
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
 @-webkit-keyframes animate {
   0% {
     top: -5px;
@@ -179,7 +202,6 @@ body {
 }
 
 .content-center {
-  margin-top: 350px;
   text-align: center;
   padding: 50px 0 0 0;
 }
@@ -227,5 +249,9 @@ body {
     min-width: 210px;
     max-width: 230px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=styles.css.map */
