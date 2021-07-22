@@ -10,8 +10,8 @@ body {
 }
 
 .logo {
-  min-width: 60px;
-  max-width: 80px;
+  min-width: 360px;
+  max-width: 380px;
 }
 
 .navbar-toggler {
@@ -32,13 +32,69 @@ body {
 }
 
 .bio {
+  position: relative;
   max-width: 800px;
   margin: 80px auto 60px auto;
+  z-index: 1;
 }
 
 .bio h1 {
   font-size: 47px;
   text-align: center;
+}
+
+.circle li.blue {
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 10%;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  left: 25%;
+  /*transform: rotate(374deg) scale(0.8, 0.8);*/
+  -webkit-animation: spin 10s linear, bigger 10s linear;
+          animation: spin 10s linear, bigger 10s linear;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bigger {
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes bigger {
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+.circle li.pink {
+  position: absolute;
+  top: 5%;
+  left: 30%x;
+  list-style: none;
+  display: block;
+  list-style: none;
+  /*transform: rotate(355deg) scale(0.4, 0.4);*/
+  -webkit-animation: spin 10s linear, bigger 10s forwards;
+          animation: spin 10s linear, bigger 10s forwards;
 }
 
 .scrolldown {
@@ -166,6 +222,10 @@ body {
   h1 {
     font-size: 40px;
     line-height: normal;
+  }
+  .logo {
+    min-width: 210px;
+    max-width: 230px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

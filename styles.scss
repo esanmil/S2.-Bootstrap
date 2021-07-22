@@ -20,8 +20,8 @@ body {
     }
 
     .logo {
-        min-width: 60px;
-        max-width: 80px;
+        min-width: 360px;
+        max-width: 380px;
     }
 
     .navbar-toggler {
@@ -42,14 +42,55 @@ body {
     }
 
     .bio{
+        position: relative;
         max-width: 800px;
         margin: 80px auto 60px auto;
+        z-index: 1;
+       
         h1{
             font-size: 47px;
             text-align: center;
+            
         }
         
     }
+
+    
+    .circle li.blue{
+        position: absolute;
+        display: block;
+        top:30%;
+        left:10%;
+        list-style: none;
+        width: 20px;
+	    height: 20px;
+        left: 25%;
+        
+        
+        /*transform: rotate(374deg) scale(0.8, 0.8);*/
+       
+        animation:spin 10s linear, bigger 10s linear;
+        
+    }
+
+    
+    @keyframes spin { 100% { transform:rotate(360deg); } }
+    @keyframes bigger { 100% { transform:scale(0.8); } }
+
+    .circle li.pink{
+        position: absolute;
+        top:5%;
+        left:30%x;
+        list-style:none;
+        display: block;
+        list-style: none;
+       /*transform: rotate(355deg) scale(0.4, 0.4);*/
+     
+        animation:spin 10s linear, bigger 10s forwards;
+       
+    }
+
+    
 
     .scrolldown{
         position: relative;
@@ -58,7 +99,7 @@ body {
         width: 40px;
         height: 40px;
         
-        transform: translateY(-80px) translateX(-50%) rotate(45deg);
+       transform: translateY(-80px) translateX(-50%) rotate(45deg);
 
         span{
             position: absolute;
@@ -156,6 +197,10 @@ body {
     // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
     h1 {font-size: 40px; line-height: normal;}
+    .logo{
+        min-width: 210px;
+        max-width: 230px;
+    }
 }
 
 // Small devices (landscape phones, less than 768px)
