@@ -4,9 +4,16 @@ body {
 }
 
 .nav-link {
+  position: relative;
+  text-align: center;
   color: #1a1a1a;
   font-family: "Karla", sans-serif;
   font-size: 20px;
+  z-index: 1;
+}
+
+.nav-link:hover {
+  color: #341aac;
 }
 
 .logo {
@@ -22,15 +29,79 @@ body {
   outline: none;
 }
 
+/*.navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: $gris;
+        transition: visibility .2 ease-in-out;
+    }*/
+#login {
+  position: relative;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: .2rem 1rem;
+  line-height: 30px;
+  color: #fff;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+#login:hover {
+  background-color: #f4423f;
+  border: 2px solid #f4423f;
+}
+
+#singup {
+  position: relative;
+  text-align: center;
+  border: 2px solid #f4423f;
+  background-color: #f4423f;
+  border-radius: 20px;
+  padding: .2rem 1rem;
+  line-height: 30px;
+  color: #fff;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#singup:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #f4423f;
+}
+
 .box {
   height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, right top, color-stop(10%, #afafee), color-stop(110%, #f5b9d7));
   background-image: linear-gradient(to top right, #afafee 10%, #f5b9d7 110%);
   background-repeat: no-repeat;
-  /* background-size: auto 1000px;
+  /*background-size: auto 1000px;
         background-position: relative;*/
 }
 
+/*  .loginbtn{
+        font-size:20px;
+        color:$gris;
+        outline: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-family: $sans-serif;
+        &:hover{
+            color: $purple;
+        }
+        &:focus {
+            outline: none;
+        } 
+    }*/
 .bio {
   position: relative;
   max-width: 800px;
@@ -240,14 +311,63 @@ body {
   color: #1a1a1a;
 }
 
-@media (max-width: 575.98px) {
-  h1 {
-    font-size: 40px;
-    line-height: normal;
+@media (max-width: 320px) and (max-width: 480px) {
+  .bio h1 {
+    font-size: 35px !important;
+    line-height: normal !important;
+    margin: 0  0 5px 5px;
   }
   .logo {
-    min-width: 210px;
-    max-width: 230px;
+    min-width: 180px !important;
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bio h1 {
+    font-size: 25px !important;
+    line-height: normal !important;
+    margin: 0  0 5px 5px;
+  }
+  .logo {
+    min-width: 180px !important;
+    max-width: 200px !important;
+  }
+  #login {
+    width: 30%;
+  }
+  #singup {
+    width: 30%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bio h1 {
+    font-size: 35px !important;
+    line-height: normal !important;
+    margin: 0  0 5px 5px;
+  }
+  .logo {
+    min-width: 180px !important;
+    max-width: 200px !important;
+  }
+  #login {
+    width: 30%;
+  }
+  #singup {
+    width: 30%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .carousel-inner {
+    height: auto;
+  }
+  #login {
+    width: 30%;
+  }
+  #singup {
+    width: 30%;
   }
 }
 
