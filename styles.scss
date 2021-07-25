@@ -13,26 +13,28 @@ body {
     
 }
 
-  
+
+        .nav-link { 
+                position: relative;
+                display: block;
+                text-align: center;
+                color: $gris;
+                font-family:$sans-serif ;
+                font-size: 20px;
+                z-index: 1;
+                &:hover{
+                    color: $purple;
+                }
+                
+        }
     
-    .nav-link { 
-            position: relative;
-            text-align: center;
-            color: $gris;
-            font-family:$sans-serif ;
-            font-size: 20px;
-            z-index: 1;
-            &:hover{
-                color: $purple;
-            }
-            
-    }
 
     .logo {
         min-width: 360px;
         max-width: 380px;
     }
 
+    /*burguer*/
     .navbar-toggler {
         font-size: 40px;
 
@@ -59,7 +61,9 @@ body {
 
     #login{
         position: relative;
+        font-family: sans-serif;
         text-align: center;
+        background-color: transparent;
         border:2px solid $white;
         border-radius: 20px;
         padding: .2rem 1rem ;
@@ -71,12 +75,14 @@ body {
         &:hover{
             background-color: $coral;
             border: 2px solid $coral;
+        
         }
 
     }
 
     #singup{
         position: relative;
+        font-family: sans-serif;
         text-align: center;
         border:2px solid $coral;
         background-color: $coral;
@@ -84,7 +90,6 @@ body {
         padding: .2rem 1rem ;
         line-height: 30px;
         color: $white;
-        
         margin: 0 auto;
         z-index: 1;
         &:hover{
@@ -137,7 +142,8 @@ body {
         
     }
 
-    
+    /*dancing circles*/
+
     .circle li.blue{
         position: absolute;
         display: block;
@@ -171,7 +177,7 @@ body {
        
     }
 
-    
+    /*arrows*/
 
     .scrolldown{
         position: absolute;
@@ -284,7 +290,8 @@ body {
 
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 320px) and (max-width: 480px)  { 
+    @media (max-width: 320px)   { 
+       
         .bio h1{
             font-size: 35px !important;
             line-height: normal !important;
@@ -298,6 +305,9 @@ body {
             min-width: 180px !important;
             max-width: 200px !important;
         }
+
+        
+      
     }
 
     @media (max-width: 575.98px) { 
