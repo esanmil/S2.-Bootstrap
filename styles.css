@@ -14,7 +14,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #341aac;
+  color: #2a2afc;
 }
 
 .logo {
@@ -31,19 +31,6 @@ body {
   outline: none;
 }
 
-/*.navbar-collapse {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        overflow-y: auto;
-        visibility: hidden;
-        background-color: $gris;
-        transition: visibility .2 ease-in-out;
-    }*/
 #login {
   position: relative;
   font-family: sans-serif;
@@ -61,6 +48,12 @@ body {
 #login:hover {
   background-color: #f4423f;
   border: 2px solid #f4423f;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#login:hover:focus {
+  outline: none;
 }
 
 #singup {
@@ -83,6 +76,27 @@ body {
   color: #f4423f;
 }
 
+#singup:hover:focus {
+  outline: none;
+}
+
+.modal {
+  border-radius: none;
+  background-color: #ceb3e4;
+}
+
+.modal .modal-body {
+  font-family: sans-serif;
+}
+
+.modal .modal-body .btn-sudmit {
+  background-color: #2a2afc;
+  color: #fff;
+  border: 2px solid #2a2afc;
+  border-radius: 20px;
+  padding: .2rem 1rem;
+}
+
 .box {
   height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, right top, color-stop(10%, #afafee), color-stop(110%, #f5b9d7));
@@ -92,21 +106,6 @@ body {
         background-position: relative;*/
 }
 
-/*  .loginbtn{
-        font-size:20px;
-        color:$gris;
-        outline: none;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        font-family: $sans-serif;
-        &:hover{
-            color: $purple;
-        }
-        &:focus {
-            outline: none;
-        } 
-    }*/
 .bio {
   position: relative;
   max-width: 800px;
@@ -299,8 +298,7 @@ body {
 }
 
 .col-md-6 .portfolio-container {
-  height: 500px;
-  /* width: 500px;*/
+  height: 100%;
   overflow: hidden;
 }
 
@@ -318,67 +316,115 @@ body {
   color: #1a1a1a;
 }
 
+/*========================================carousel================================================*/
+.slider h2 {
+  font-size: 35px;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
+.slider .avatar {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.slider .opinion {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+
+/*========================================footer================================================*/
+.footer {
+  background-color: #afafee;
+}
+
+.footer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.footer h4 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.footer p {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.footer .footer-social ion-icon {
+  color: #1a1a1a;
+  height: 40px;
+  width: 40px;
+}
+
+.footer .footer-social ion-icon:hover {
+  color: #fff;
+}
+
 @media (max-width: 320px) {
-  .bio h1 {
+  .footer .bio h1 {
     font-size: 35px !important;
     line-height: normal !important;
     margin: 0  0 5px 5px;
   }
-  .logo {
+  .footer .logo {
     min-width: 180px !important;
     max-width: 200px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  .bio h1 {
+  .footer .bio h1 {
     font-size: 25px !important;
     line-height: normal !important;
     margin: 0  0 5px 5px;
   }
-  .logo {
+  .footer .logo {
     min-width: 180px !important;
     max-width: 200px !important;
   }
-  #login {
+  .footer #login {
     width: 30%;
   }
-  #singup {
+  .footer #singup {
     width: 30%;
   }
 }
 
 @media (max-width: 767.98px) {
-  .bio h1 {
+  .footer .bio h1 {
     font-size: 35px !important;
     line-height: normal !important;
     margin: 0  0 5px 5px;
   }
-  .logo {
+  .footer .logo {
     min-width: 180px !important;
     max-width: 200px !important;
   }
-  #login {
+  .footer #login {
     width: 30%;
   }
-  #singup {
+  .footer #singup {
     width: 30%;
   }
 }
 
 @media (max-width: 991.98px) {
-  .carousel-inner {
+  .footer .carousel-inner {
     height: auto;
   }
-  #login {
+  .footer #login {
     width: 30%;
   }
-  #singup {
+  .footer #singup {
     width: 30%;
   }
 }
 
-html {
+.footer html {
   scroll-behavior: smooth;
 }
 /*# sourceMappingURL=styles.css.map */

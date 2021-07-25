@@ -1,7 +1,8 @@
 $gris: #1a1a1a;
-$purple:rgb(52, 26, 172);
+$purple:#2a2afc;
 $bgcolor:#afafee;
 $bgcolor2: #f5b9d7;
+$lila:#ceb3e4;
 $white:#fff;
 $coral: #f4423f;
 $sans-serif:'Karla', sans-serif;
@@ -12,6 +13,9 @@ body {
     font-family: 'Spectral', serif;
     
 }
+
+
+       
 
 
         .nav-link { 
@@ -43,20 +47,7 @@ body {
         }
     }
 
-    /*.navbar-collapse {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        overflow-y: auto;
-        visibility: hidden;
-        background-color: $gris;
-        transition: visibility .2 ease-in-out;
-    }*/
-
+   
   
 
     #login{
@@ -70,12 +61,14 @@ body {
         line-height: 30px;
         color: $white;
         z-index: 1;
-        
         margin: 0 auto;
         &:hover{
             background-color: $coral;
             border: 2px solid $coral;
-        
+            transition: all .2s;
+        &:focus {
+            outline: none;
+            }
         }
 
     }
@@ -96,8 +89,26 @@ body {
             background-color:$white;
             border: 2px solid $white;
             color: $coral;
+        &:focus {
+            outline: none;
+            }
         }
 
+    }
+    .modal{
+        border-radius: none;
+        background-color:$lila;
+        .modal-body{
+            font-family: sans-serif;
+        
+            .btn-sudmit{
+                background-color: $purple;
+                color: $white;
+                border:2px solid $purple;
+                border-radius: 20px;
+                padding: .2rem 1rem ;
+            }
+        }
     }
 
     .box {
@@ -109,22 +120,7 @@ body {
         background-position: relative;*/
     }
 
-  /*  .loginbtn{
-        font-size:20px;
-        color:$gris;
-        outline: none;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        font-family: $sans-serif;
-        &:hover{
-            color: $purple;
-        }
-        &:focus {
-            outline: none;
-        } 
-    }*/
-
+ 
 
 
 
@@ -269,8 +265,8 @@ body {
     
 
         .portfolio-container {
-            height: 500px;
-        /* width: 500px;*/
+            height: 100%;
+       
             overflow: hidden;
         }
         img-fluid {
@@ -287,6 +283,60 @@ body {
                 }
             }
     }
+
+    /*========================================carousel================================================*/
+
+    
+    .slider{
+
+         
+        h2{
+            font-size: 35px;
+            text-align: center;
+            padding: 50px 0 0 0;
+        }
+
+        .avatar{
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+        }
+        .opinion{
+            font-size: 1.4rem;
+            font-family: sans-serif;
+            
+
+        }
+
+    }
+     /*========================================footer================================================*/
+.footer{
+    background-color:$bgcolor;
+    h3{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    h4{
+        font-family: sans-serif;
+        text-align: center;
+    }
+    p{
+        font-family: sans-serif;
+        text-align: center; 
+    }
+
+    .footer-social{
+        ion-icon {
+        color: $gris;
+        height: 40px;
+        width: 40px;
+        &:hover{
+        color:$white;
+        }   
+
+    }
+
+}
 
 
     // Extra small devices (portrait phones, less than 576px)
@@ -384,4 +434,4 @@ body {
         scroll-behavior: smooth;
     }
 
-        
+}
