@@ -98,9 +98,21 @@ body {
     .modal{
         border-radius: none;
         background-color:$lila;
+
+        
+        
+        .modal-content{
+            border: none;
+            border-radius: 20px;
+           
+            
+        }
+        
         .modal-body{
             font-family: sans-serif;
-        
+            
+        }
+
             .btn-sudmit{
                 background-color: $purple;
                 color: $white;
@@ -109,7 +121,7 @@ body {
                 padding: .2rem 1rem ;
             }
         }
-    }
+    
 
     .box {
 

@@ -85,11 +85,16 @@ body {
   background-color: #ceb3e4;
 }
 
+.modal .modal-content {
+  border: none;
+  border-radius: 20px;
+}
+
 .modal .modal-body {
   font-family: sans-serif;
 }
 
-.modal .modal-body .btn-sudmit {
+.modal .btn-sudmit {
   background-color: #2a2afc;
   color: #fff;
   border: 2px solid #2a2afc;
